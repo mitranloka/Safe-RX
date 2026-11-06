@@ -1,0 +1,208 @@
+{
+  "experiment_name": "Unknown / OOD Medicine Word Rejection",
+  "random_seed": 42,
+  "sample_counts": {
+    "in_distribution_targets": 92,
+    "out_of_distribution_non_targets": 92
+  },
+  "metric_distributions": {
+    "target": {
+      "mean_confidence": 0.9717,
+      "mean_similarity": 0.9254,
+      "mean_margin": 0.953
+    },
+    "non_target": {
+      "mean_confidence": 0.7381,
+      "mean_similarity": 0.8174,
+      "mean_margin": 0.5785
+    }
+  },
+  "confidence_threshold_sweep": [
+    {
+      "threshold": 0.5,
+      "true_accept_rate_pct": 100.0,
+      "false_accept_rate_pct": 85.87,
+      "false_reject_rate_pct": 0.0,
+      "false_positives_count": 79,
+      "false_rejections_count": 0
+    },
+    {
+      "threshold": 0.7,
+      "true_accept_rate_pct": 97.83,
+      "false_accept_rate_pct": 59.78,
+      "false_reject_rate_pct": 2.17,
+      "false_positives_count": 55,
+      "false_rejections_count": 2
+    },
+    {
+      "threshold": 0.8,
+      "true_accept_rate_pct": 95.65,
+      "false_accept_rate_pct": 45.65,
+      "false_reject_rate_pct": 4.35,
+      "false_positives_count": 42,
+      "false_rejections_count": 4
+    },
+    {
+      "threshold": 0.85,
+      "true_accept_rate_pct": 92.39,
+      "false_accept_rate_pct": 36.96,
+      "false_reject_rate_pct": 7.61,
+      "false_positives_count": 34,
+      "false_rejections_count": 7
+    },
+    {
+      "threshold": 0.9,
+      "true_accept_rate_pct": 88.04,
+      "false_accept_rate_pct": 31.52,
+      "false_reject_rate_pct": 11.96,
+      "false_positives_count": 29,
+      "false_rejections_count": 11
+    },
+    {
+      "threshold": 0.95,
+      "true_accept_rate_pct": 86.96,
+      "false_accept_rate_pct": 14.13,
+      "false_reject_rate_pct": 13.04,
+      "false_positives_count": 13,
+      "false_rejections_count": 12
+    },
+    {
+      "threshold": 0.99,
+      "true_accept_rate_pct": 75.0,
+      "false_accept_rate_pct": 4.35,
+      "false_reject_rate_pct": 25.0,
+      "false_positives_count": 4,
+      "false_rejections_count": 23
+    }
+  ],
+  "dual_filter_sweep": [
+    {
+      "confidence_threshold": 0.8,
+      "similarity_threshold": 0.85,
+      "true_accept_rate_pct": 89.13,
+      "false_accept_rate_pct": 27.17,
+      "false_reject_rate_pct": 10.87,
+      "false_positives_count": 25,
+      "false_rejections_count": 10
+    },
+    {
+      "confidence_threshold": 0.85,
+      "similarity_threshold": 0.88,
+      "true_accept_rate_pct": 86.96,
+      "false_accept_rate_pct": 13.04,
+      "false_reject_rate_pct": 13.04,
+      "false_positives_count": 12,
+      "false_rejections_count": 12
+    },
+    {
+      "confidence_threshold": 0.9,
+      "similarity_threshold": 0.88,
+      "true_accept_rate_pct": 86.96,
+      "false_accept_rate_pct": 13.04,
+      "false_reject_rate_pct": 13.04,
+      "false_positives_count": 12,
+      "false_rejections_count": 12
+    },
+    {
+      "confidence_threshold": 0.9,
+      "similarity_threshold": 0.9,
+      "true_accept_rate_pct": 79.35,
+      "false_accept_rate_pct": 6.52,
+      "false_reject_rate_pct": 20.65,
+      "false_positives_count": 6,
+      "false_rejections_count": 19
+    },
+    {
+      "confidence_threshold": 0.95,
+      "similarity_threshold": 0.9,
+      "true_accept_rate_pct": 79.35,
+      "false_accept_rate_pct": 6.52,
+      "false_reject_rate_pct": 20.65,
+      "false_positives_count": 6,
+      "false_rejections_count": 19
+    },
+    {
+      "confidence_threshold": 0.95,
+      "similarity_threshold": 0.92,
+      "true_accept_rate_pct": 69.57,
+      "false_accept_rate_pct": 3.26,
+      "false_reject_rate_pct": 30.43,
+      "false_positives_count": 3,
+      "false_rejections_count": 28
+    }
+  ],
+  "sample_false_positives": [
+    {
+      "image": "P0184.jpg",
+      "actual_word": "Nexum Mups 20",
+      "falsely_predicted_as": "Omeprazole",
+      "confidence_pct": 99.96,
+      "similarity": 0.9538
+    },
+    {
+      "image": "P0524.jpg",
+      "actual_word": "kindical D",
+      "falsely_predicted_as": "Voltalin",
+      "confidence_pct": 99.89,
+      "similarity": 0.9516
+    },
+    {
+      "image": "P0272.jpg",
+      "actual_word": "Alfix",
+      "falsely_predicted_as": "Algin",
+      "confidence_pct": 99.61,
+      "similarity": 0.9068
+    },
+    {
+      "image": "P0002.jpg",
+      "actual_word": "Inderen",
+      "falsely_predicted_as": "Voltalin",
+      "confidence_pct": 99.36,
+      "similarity": 0.8815
+    },
+    {
+      "image": "P0160.jpg",
+      "actual_word": "Levox",
+      "falsely_predicted_as": "Nexe",
+      "confidence_pct": 98.94,
+      "similarity": 0.8855
+    }
+  ],
+  "sample_false_rejections": [
+    {
+      "image": "P3474.jpg",
+      "target_medicine": "Algin",
+      "predicted": "Algin",
+      "confidence_pct": 88.18,
+      "similarity": 0.8418
+    },
+    {
+      "image": "P1224.jpg",
+      "target_medicine": "Napa",
+      "predicted": "Napa",
+      "confidence_pct": 84.87,
+      "similarity": 0.8182
+    },
+    {
+      "image": "P2618.jpg",
+      "target_medicine": "Napa",
+      "predicted": "Napa",
+      "confidence_pct": 87.47,
+      "similarity": 0.8322
+    },
+    {
+      "image": "P3192.jpg",
+      "target_medicine": "Napa",
+      "predicted": "Napa",
+      "confidence_pct": 91.61,
+      "similarity": 0.875
+    },
+    {
+      "image": "P4271.jpg",
+      "target_medicine": "Napa",
+      "predicted": "Napa",
+      "confidence_pct": 88.86,
+      "similarity": 0.8481
+    }
+  ]
+}

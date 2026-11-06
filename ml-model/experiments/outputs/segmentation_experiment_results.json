@@ -1,0 +1,298 @@
+[
+  {
+    "filename": "P2000.jpg",
+    "original_label": "Napa extra",
+    "target_medicine": "Napa",
+    "detected_regions_count": 2,
+    "regions": [
+      {
+        "region_id": 0,
+        "bounding_box": {
+          "x": 59,
+          "y": 178,
+          "width": 209,
+          "height": 169
+        },
+        "crop_saved_as": "crop_P2000_box0.jpg",
+        "predicted_class": "Napa",
+        "confidence_pct": 83.55,
+        "top_3_predictions": [
+          {
+            "class": "Napa",
+            "confidence_pct": 83.55
+          },
+          {
+            "class": "Dexter",
+            "confidence_pct": 8.01
+          },
+          {
+            "class": "Nexe",
+            "confidence_pct": 6.51
+          }
+        ]
+      },
+      {
+        "region_id": 1,
+        "bounding_box": {
+          "x": 287,
+          "y": 168,
+          "width": 210,
+          "height": 194
+        },
+        "crop_saved_as": "crop_P2000_box1.jpg",
+        "predicted_class": "Dexter",
+        "confidence_pct": 95.5,
+        "top_3_predictions": [
+          {
+            "class": "Dexter",
+            "confidence_pct": 95.5
+          },
+          {
+            "class": "Napa",
+            "confidence_pct": 3.53
+          },
+          {
+            "class": "Nexe",
+            "confidence_pct": 0.58
+          }
+        ]
+      }
+    ],
+    "annotated_image": "annotated_P2000.jpg"
+  },
+  {
+    "filename": "P1126.jpg",
+    "original_label": "Dexter 60",
+    "target_medicine": "Dexter",
+    "detected_regions_count": 3,
+    "regions": [
+      {
+        "region_id": 0,
+        "bounding_box": {
+          "x": 64,
+          "y": 264,
+          "width": 83,
+          "height": 241
+        },
+        "crop_saved_as": "crop_P1126_box0.jpg",
+        "predicted_class": "Dexter",
+        "confidence_pct": 58.86,
+        "top_3_predictions": [
+          {
+            "class": "Dexter",
+            "confidence_pct": 58.86
+          },
+          {
+            "class": "Algin",
+            "confidence_pct": 28.68
+          },
+          {
+            "class": "Omeprazole",
+            "confidence_pct": 4.92
+          }
+        ]
+      },
+      {
+        "region_id": 1,
+        "bounding_box": {
+          "x": 149,
+          "y": 151,
+          "width": 226,
+          "height": 285
+        },
+        "crop_saved_as": "crop_P1126_box1.jpg",
+        "predicted_class": "Dexter",
+        "confidence_pct": 64.27,
+        "top_3_predictions": [
+          {
+            "class": "Dexter",
+            "confidence_pct": 64.27
+          },
+          {
+            "class": "Napa",
+            "confidence_pct": 33.89
+          },
+          {
+            "class": "Nexe",
+            "confidence_pct": 0.67
+          }
+        ]
+      },
+      {
+        "region_id": 2,
+        "bounding_box": {
+          "x": 382,
+          "y": 141,
+          "width": 98,
+          "height": 181
+        },
+        "crop_saved_as": "crop_P1126_box2.jpg",
+        "predicted_class": "Algin",
+        "confidence_pct": 47.78,
+        "top_3_predictions": [
+          {
+            "class": "Algin",
+            "confidence_pct": 47.78
+          },
+          {
+            "class": "Nexe",
+            "confidence_pct": 29.11
+          },
+          {
+            "class": "Dexter",
+            "confidence_pct": 17.64
+          }
+        ]
+      }
+    ],
+    "annotated_image": "annotated_P1126.jpg"
+  },
+  {
+    "filename": "P1314.jpg",
+    "original_label": "Tab. Algin",
+    "target_medicine": "Algin",
+    "detected_regions_count": 3,
+    "regions": [
+      {
+        "region_id": 0,
+        "bounding_box": {
+          "x": 0,
+          "y": 121,
+          "width": 180,
+          "height": 239
+        },
+        "crop_saved_as": "crop_P1314_box0.jpg",
+        "predicted_class": "Nexe",
+        "confidence_pct": 43.98,
+        "top_3_predictions": [
+          {
+            "class": "Nexe",
+            "confidence_pct": 43.98
+          },
+          {
+            "class": "Algin",
+            "confidence_pct": 28.3
+          },
+          {
+            "class": "Napa",
+            "confidence_pct": 12.38
+          }
+        ]
+      },
+      {
+        "region_id": 1,
+        "bounding_box": {
+          "x": 206,
+          "y": 167,
+          "width": 218,
+          "height": 260
+        },
+        "crop_saved_as": "crop_P1314_box1.jpg",
+        "predicted_class": "Algin",
+        "confidence_pct": 99.28,
+        "top_3_predictions": [
+          {
+            "class": "Algin",
+            "confidence_pct": 99.28
+          },
+          {
+            "class": "Napa",
+            "confidence_pct": 0.27
+          },
+          {
+            "class": "Nexe",
+            "confidence_pct": 0.26
+          }
+        ]
+      },
+      {
+        "region_id": 2,
+        "bounding_box": {
+          "x": 407,
+          "y": 101,
+          "width": 79,
+          "height": 198
+        },
+        "crop_saved_as": "crop_P1314_box2.jpg",
+        "predicted_class": "Algin",
+        "confidence_pct": 93.1,
+        "top_3_predictions": [
+          {
+            "class": "Algin",
+            "confidence_pct": 93.1
+          },
+          {
+            "class": "Napa",
+            "confidence_pct": 4.42
+          },
+          {
+            "class": "Dexter",
+            "confidence_pct": 0.99
+          }
+        ]
+      }
+    ],
+    "annotated_image": "annotated_P1314.jpg"
+  },
+  {
+    "filename": "P2373.jpg",
+    "original_label": "Nexe mups",
+    "target_medicine": "Nexe",
+    "detected_regions_count": 2,
+    "regions": [
+      {
+        "region_id": 0,
+        "bounding_box": {
+          "x": 46,
+          "y": 59,
+          "width": 201,
+          "height": 188
+        },
+        "crop_saved_as": "crop_P2373_box0.jpg",
+        "predicted_class": "Nexe",
+        "confidence_pct": 99.99,
+        "top_3_predictions": [
+          {
+            "class": "Nexe",
+            "confidence_pct": 99.99
+          },
+          {
+            "class": "Algin",
+            "confidence_pct": 0.0
+          },
+          {
+            "class": "Dexter",
+            "confidence_pct": 0.0
+          }
+        ]
+      },
+      {
+        "region_id": 1,
+        "bounding_box": {
+          "x": 251,
+          "y": 0,
+          "width": 261,
+          "height": 455
+        },
+        "crop_saved_as": "crop_P2373_box1.jpg",
+        "predicted_class": "Omeprazole",
+        "confidence_pct": 62.74,
+        "top_3_predictions": [
+          {
+            "class": "Omeprazole",
+            "confidence_pct": 62.74
+          },
+          {
+            "class": "Napa",
+            "confidence_pct": 35.62
+          },
+          {
+            "class": "Algin",
+            "confidence_pct": 1.03
+          }
+        ]
+      }
+    ],
+    "annotated_image": "annotated_P2373.jpg"
+  }
+]

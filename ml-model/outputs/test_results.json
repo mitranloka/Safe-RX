@@ -1,0 +1,107 @@
+{
+  "best_epoch": 8,
+  "best_val_accuracy_pct": 98.91,
+  "best_val_loss": 0.0969,
+  "test_loss": 0.1442,
+  "test_accuracy_pct": 94.57,
+  "total_test_samples": 92,
+  "per_class": {
+    "Algin": {
+      "total_samples": 11,
+      "correct": 11,
+      "accuracy_pct": 100.0
+    },
+    "Dexter": {
+      "total_samples": 15,
+      "correct": 14,
+      "accuracy_pct": 93.33
+    },
+    "Napa": {
+      "total_samples": 23,
+      "correct": 20,
+      "accuracy_pct": 86.96
+    },
+    "Nexe": {
+      "total_samples": 16,
+      "correct": 16,
+      "accuracy_pct": 100.0
+    },
+    "Omeprazole": {
+      "total_samples": 15,
+      "correct": 14,
+      "accuracy_pct": 93.33
+    },
+    "Voltalin": {
+      "total_samples": 12,
+      "correct": 12,
+      "accuracy_pct": 100.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      11,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      14,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      20,
+      2,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      16,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      14,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      12
+    ]
+  ],
+  "classes": [
+    "Algin",
+    "Dexter",
+    "Napa",
+    "Nexe",
+    "Omeprazole",
+    "Voltalin"
+  ],
+  "class_to_idx": {
+    "Algin": 0,
+    "Dexter": 1,
+    "Napa": 2,
+    "Nexe": 3,
+    "Omeprazole": 4,
+    "Voltalin": 5
+  },
+  "training_time_seconds": 144.7
+}

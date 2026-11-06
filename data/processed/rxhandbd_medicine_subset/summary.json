@@ -1,0 +1,61 @@
+{
+  "dataset_name": "RxHandBD Medicine Classification Subset",
+  "random_seed": 42,
+  "target_split_ratios": {
+    "train": 0.7,
+    "val": 0.15,
+    "test": 0.15
+  },
+  "total_samples": 616,
+  "classes": [
+    "Napa",
+    "Omeprazole",
+    "Nexe",
+    "Dexter",
+    "Voltalin",
+    "Algin"
+  ],
+  "class_breakdown": {
+    "Algin": {
+      "train": 55,
+      "val": 12,
+      "test": 11,
+      "total": 78
+    },
+    "Dexter": {
+      "train": 70,
+      "val": 15,
+      "test": 15,
+      "total": 100
+    },
+    "Napa": {
+      "train": 105,
+      "val": 22,
+      "test": 23,
+      "total": 150
+    },
+    "Nexe": {
+      "train": 72,
+      "val": 15,
+      "test": 16,
+      "total": 103
+    },
+    "Omeprazole": {
+      "train": 73,
+      "val": 16,
+      "test": 15,
+      "total": 104
+    },
+    "Voltalin": {
+      "train": 57,
+      "val": 12,
+      "test": 12,
+      "total": 81
+    }
+  },
+  "split_totals": {
+    "train": 432,
+    "val": 92,
+    "test": 92
+  }
+}
