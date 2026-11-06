@@ -5,6 +5,7 @@ from pydantic import BaseModel, Field
 from services.safe_guard import check_medicines
 from services.safe_save import check_savings
 from services.ml_bridge import predict_word_image
+from services.ocr_service import extract_prescription_text
 
 app = FastAPI(
     title="SAFE-Rx API",
@@ -64,6 +65,35 @@ class SafeSaveRequest(BaseModel):
 @app.post("/api/safe-save/check")
 def safe_save_check(payload: SafeSaveRequest):
     return check_savings(payload.medicines)
+
+
+# ---------------------------------------------------------------------------
+# Prescription OCR Text Extraction Endpoint (Local Offline OCR)
+# ---------------------------------------------------------------------------
+@app.post("/api/prescription/extract")
+def extract_prescription(file: UploadFile = File(...)):
+    """
+    Extracts text from an uploaded prescription image or PDF using local RapidOCR,
+    and identifies candidate medicines. Does not use external AI APIs.
+    """
+    if not file or not file.filename:
+        raise HTTPException(status_code=400, detail="No prescription file was uploaded.")
+
+    content = file.file.read()
+    if not content or len(content) == 0:
+        raise HTTPException(status_code=400, detail="Uploaded file is empty.")
+
+    try:
+        result = extract_prescription_text(
+            file_bytes=content,
+            filename=file.filename,
+            content_type=file.content_type or ""
+        )
+        return result
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"OCR processing failed: {str(e)}")
 
 
 # ---------------------------------------------------------------------------

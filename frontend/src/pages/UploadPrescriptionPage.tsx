@@ -11,7 +11,7 @@ import FilePreview from '@/components/upload/FilePreview';
 
 export default function UploadPrescriptionPage() {
   const { navigate } = useRouter();
-  const { file, setFile, setMedicines } = usePrescription();
+  const { file, setFile, setExtractionResult } = usePrescription();
   const [error, setError] = useState<string | null>(null);
   const [isAnalysing, setIsAnalysing] = useState(false);
 
@@ -30,8 +30,8 @@ export default function UploadPrescriptionPage() {
     setError(null);
     setIsAnalysing(true);
     try {
-      const medicines = await analyzePrescription(file);
-      setMedicines(medicines);
+      const result = await analyzePrescription(file);
+      setExtractionResult(result);
       navigate('/verify');
     } catch (err) {
       setError(err instanceof Error ? err.message : 'We could not read this prescription. Please try again.');
@@ -48,7 +48,7 @@ export default function UploadPrescriptionPage() {
     <>
       <PageHeader
         title="Upload prescription"
-        description="Add a clear photo or PDF of your prescription. We will read the medicines so you can verify them next."
+        description="Add a clear photo or PDF of your prescription. Local OCR will extract the text and candidate medicines for your verification."
       />
 
       <div className="grid gap-8 lg:grid-cols-[1fr_320px]">
@@ -87,7 +87,7 @@ export default function UploadPrescriptionPage() {
                 {isAnalysing ? (
                   <>
                     <Loader2 className="h-5 w-5 animate-spin" aria-hidden="true" />
-                    Analysing prescription...
+                    Extracting text with local OCR...
                   </>
                 ) : (
                   <>
@@ -111,6 +111,7 @@ export default function UploadPrescriptionPage() {
               <li>Place the whole prescription in frame, with good light and no glare.</li>
               <li>Make sure medicine names and strengths are easy to read.</li>
               <li>Upload every page if your prescription spans more than one.</li>
+              <li>Local OCR processes JPG, PNG, WEBP, and PDF documents completely offline.</li>
             </ul>
           </div>
           <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6 text-sm leading-relaxed text-slate-600">
