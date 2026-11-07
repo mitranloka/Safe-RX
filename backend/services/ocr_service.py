@@ -40,52 +40,12 @@ SUPPORTED_MIME_TYPES = {
 }
 
 # ---------------------------------------------------------------------------
-# Known Medicines Catalog
+# Known Medicines Catalog (Imported from modular data/medicine_catalog.py)
 # ---------------------------------------------------------------------------
-# Keys are the canonical lookup tokens (lowercase, space-separated).
-# Each entry must have: brand, salt, strength.
-# Longer / more-specific keys are preferred at match time (sorted by length
-# descending), so "dolo 650" beats "dolo" when both could match.
-# ---------------------------------------------------------------------------
-KNOWN_MEDICINES: Dict[str, Dict[str, str]] = {
-    # Paracetamol brands
-    "dolo 650":          {"brand": "Dolo 650",         "salt": "Paracetamol",                   "strength": "650 mg"},
-    "dolo":              {"brand": "Dolo 650",         "salt": "Paracetamol",                   "strength": "650 mg"},
-    "calpol 650":        {"brand": "Calpol 650",       "salt": "Paracetamol",                   "strength": "650 mg"},
-    "calpol":            {"brand": "Calpol 650",       "salt": "Paracetamol",                   "strength": "650 mg"},
-    "crocin 650":        {"brand": "Crocin 650",       "salt": "Paracetamol",                   "strength": "650 mg"},
-    "crocin":            {"brand": "Crocin 650",       "salt": "Paracetamol",                   "strength": "500 mg"},
-    "napa":              {"brand": "Napa",             "salt": "Paracetamol",                   "strength": "500 mg"},
-    "paracetamol":       {"brand": "Paracetamol",      "salt": "Paracetamol",                   "strength": "500 mg"},
-    # Anti-histamines
-    "cetirizine":        {"brand": "Cetirizine",       "salt": "Cetirizine",                    "strength": "10 mg"},
-    "zyrtec 10":         {"brand": "Zyrtec 10",        "salt": "Cetirizine",                    "strength": "10 mg"},
-    "zyrtec":            {"brand": "Zyrtec 10",        "salt": "Cetirizine",                    "strength": "10 mg"},
-    "allegra 120":       {"brand": "Allegra 120",      "salt": "Fexofenadine",                  "strength": "120 mg"},
-    "allegra":           {"brand": "Allegra",          "salt": "Fexofenadine",                  "strength": "120 mg"},
-    # PPIs
-    "pantocid 40":       {"brand": "Pantocid 40",      "salt": "Pantoprazole",                  "strength": "40 mg"},
-    "pantocid":          {"brand": "Pantocid 40",      "salt": "Pantoprazole",                  "strength": "40 mg"},
-    "omeprazole":        {"brand": "Omeprazole",       "salt": "Omeprazole",                    "strength": "20 mg"},
-    "pantoprazole":      {"brand": "Pantoprazole",     "salt": "Pantoprazole",                  "strength": "40 mg"},
-    "nexe":              {"brand": "Nexe",             "salt": "Esomeprazole",                  "strength": "20 mg"},
-    # Antibiotics
-    "augmentin 625 duo": {"brand": "Augmentin 625 Duo", "salt": "Amoxicillin and Clavulanic Acid", "strength": "625 mg"},
-    "augmentin":         {"brand": "Augmentin",        "salt": "Amoxicillin and Clavulanic Acid", "strength": "625 mg"},
-    "azithral 500":      {"brand": "Azithral 500",     "salt": "Azithromycin",                  "strength": "500 mg"},
-    "azithral":          {"brand": "Azithral 500",     "salt": "Azithromycin",                  "strength": "500 mg"},
-    "amoxicillin":       {"brand": "Amoxicillin",      "salt": "Amoxicillin",                   "strength": "500 mg"},
-    # NSAIDs / analgesics
-    "ibuprofen":         {"brand": "Ibuprofen",        "salt": "Ibuprofen",                     "strength": "400 mg"},
-    "dexter":            {"brand": "Dexter",           "salt": "Dexibuprofen",                  "strength": "300 mg"},
-    "voltalin":          {"brand": "Voltalin",         "salt": "Diclofenac",                    "strength": "50 mg"},
-    "algin":             {"brand": "Algin",            "salt": "Timonium Methylsulphate",        "strength": "50 mg"},
-    # Other
-    "metformin":         {"brand": "Metformin",        "salt": "Metformin",                     "strength": "500 mg"},
-}
+# Re-exported here so any existing caller or test continues to work unchanged.
+from data.medicine_catalog import KNOWN_MEDICINES, CATALOG_KEYS_SORTED
 
-# Pre-compute sorted keys (longest first) so more-specific keys win.
-_CATALOG_KEYS_SORTED: List[str] = sorted(KNOWN_MEDICINES.keys(), key=lambda k: -len(k))
+_CATALOG_KEYS_SORTED: List[str] = CATALOG_KEYS_SORTED
 
 # ---------------------------------------------------------------------------
 # Detail-extraction regexes
